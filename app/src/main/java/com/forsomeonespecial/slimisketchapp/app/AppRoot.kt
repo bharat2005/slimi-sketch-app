@@ -26,7 +26,7 @@ fun AppRoot(
         Scaffold { _ ->
             NavHost(
                 navController = rootNavController,
-                startDestination = MainGraph
+                startDestination = OnboardGraph
             ){
                 onboardNavGraph(rootNavController)
 
