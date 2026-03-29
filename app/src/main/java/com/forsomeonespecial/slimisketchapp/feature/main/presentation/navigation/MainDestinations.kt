@@ -15,51 +15,13 @@ import kotlin.reflect.KClass
 @Serializable
 object MainGraph
 
-
-sealed class MainTabDestination(
-    val route : Any,
-    val icon : ImageVector,
-    val label : String
-) {
-    companion object {
-        val destinations = listOf(
-            HomeTab,
-            SearchTab,
-            ProfileTab
-        )
-    }
-
-    object HomeTab : MainTabDestination(
-        route = HomeGraph,
-        icon = Icons.Default.Home,
-        label = "Home"
-    )
-
-    object SearchTab : MainTabDestination(
-        route = SearchGraph,
-        icon = Icons.Default.Search,
-        label = "Search"
-    )
-
-
-    object ProfileTab : MainTabDestination(
-        route = ProfileGraph,
-        icon = Icons.Default.Person,
-        label = "Profile"
-    )
-
+sealed class MainRoute{
+    @Serializable
+    object Main : MainRoute()
 }
 
 
 
-
-
-
-@Serializable
-object SearchGraph
-
-@Serializable
-object ProfileGraph
 
 
 

@@ -5,19 +5,17 @@ import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.navigation.NavController
+import androidx.navigation.NavDestination
 import androidx.navigation.NavDestination.Companion.hasRoute
 import androidx.navigation.NavDestination.Companion.hierarchy
-import androidx.navigation.NavGraph.Companion.findStartDestination
-import androidx.navigation.compose.currentBackStackEntryAsState
-import com.forsomeonespecial.slimisketchapp.feature.main.presentation.navigation.MainTabDestination
+import com.forsomeonespecial.slimisketchapp.feature.main.presentation.screen.main.MainTabDestination
 
 @Composable
-fun BottomTabBar(
-    tabNavController : NavController,
-    destinations : List<MainTabDestination>
+fun BottomNavBar(
+    currentDestination : NavDestination?,
+    destinations : List<MainTabDestination>,
+    onTabClick : (MainTabDestination) -> Unit,
 ) {
-    val currentDestination = tabNavController.currentBackStackEntryAsState().value?.destination
 
     NavigationBar {
         destinations.forEach { destination ->
@@ -25,15 +23,7 @@ fun BottomTabBar(
 
             NavigationBarItem(
                 selected = isSelected,
-                onClick = {
-                    tabNavController.navigate(destination.route){
-                        popUpTo(tabNavController.graph.findStartDestination().id){
-                            saveState = true
-                        }
-                        launchSingleTop = true
-                        restoreState = true
-                    }
-                },
+                onClick = {onTabClick(destination)},
                 icon = { Icon(destination.icon, contentDescription = destination.label) },
                 label = { Text(destination.label) }
             )
