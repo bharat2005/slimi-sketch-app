@@ -6,8 +6,8 @@ import kotlinx.serialization.Serializable
 @Serializable
 object OnboardGraph
 
-sealed class OnboardRoute {
+sealed class OnboardRoutes {
     @Serializable
-    object Screen1 : OnboardRoute()
+    object OnboardScreen1Route : OnboardRoutes()
 
 }

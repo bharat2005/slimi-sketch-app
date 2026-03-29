@@ -8,10 +8,10 @@ import com.forsomeonespecial.slimisketchapp.feature.home.presentation.screen.hom
 
 fun NavGraphBuilder.homeNavGraph(navController: NavController){
     navigation<HomeGraph>(
-        startDestination = HomeRoute.Home
+        startDestination = HomeRoutes.HomeScreen1Route
     ){
 
-        composable<HomeRoute.Home>{
+        composable<HomeRoutes.HomeScreen1Route>{
             HomeScreen()
         }
 

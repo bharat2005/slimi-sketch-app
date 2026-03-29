@@ -5,7 +5,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 object HomeGraph
 
-sealed class HomeRoute {
+sealed class HomeRoutes {
     @Serializable
-    object Home : HomeRoute()
+    object HomeScreen1Route : HomeRoutes()
 }

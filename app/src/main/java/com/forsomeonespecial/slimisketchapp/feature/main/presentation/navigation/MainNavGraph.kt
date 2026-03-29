@@ -9,9 +9,9 @@ import com.forsomeonespecial.slimisketchapp.feature.main.presentation.screen.mai
 
 fun NavGraphBuilder.mainNavGraph(navController: NavController){
     navigation<MainGraph>(
-        startDestination = MainRoute.Main
+        startDestination = MainRoutes.MainRoute
     ) {
-        composable<MainRoute.Main> {
+        composable<MainRoutes.MainRoute> {
             MainScreen(navController)
         }
     }

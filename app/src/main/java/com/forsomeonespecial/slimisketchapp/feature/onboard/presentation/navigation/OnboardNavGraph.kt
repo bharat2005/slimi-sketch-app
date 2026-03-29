@@ -8,9 +8,9 @@ import com.forsomeonespecial.slimisketchapp.feature.onboard.presentation.screen.
 
 fun NavGraphBuilder.onboardNavGraph(navController: NavController){
     navigation<OnboardGraph>(
-        startDestination = OnboardRoute.Screen1,
+        startDestination = OnboardRoutes.OnboardScreen1Route,
     ){
-        composable<OnboardRoute.Screen1> {
+        composable<OnboardRoutes.OnboardScreen1Route> {
             OnboardScreen1()
         }
     }

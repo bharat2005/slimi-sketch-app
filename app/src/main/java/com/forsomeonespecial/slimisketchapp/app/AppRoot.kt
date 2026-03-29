@@ -11,6 +11,7 @@ import androidx.navigation.compose.rememberNavController
 import com.forsomeonespecial.slimisketchapp.core.ui.theme.SlimiSketchAppTheme
 import com.forsomeonespecial.slimisketchapp.feature.main.presentation.navigation.MainGraph
 import com.forsomeonespecial.slimisketchapp.feature.main.presentation.navigation.mainNavGraph
+import com.forsomeonespecial.slimisketchapp.feature.nutritioninsights.presentation.navigation.nutritionInsightsNavGraph
 import com.forsomeonespecial.slimisketchapp.feature.onboard.presentation.navigation.OnboardGraph
 import com.forsomeonespecial.slimisketchapp.feature.onboard.presentation.navigation.onboardNavGraph
 
@@ -31,6 +32,7 @@ fun AppRoot(
 
                 mainNavGraph(rootNavController)
 
+                nutritionInsightsNavGraph(rootNavController)
 
             }
 
