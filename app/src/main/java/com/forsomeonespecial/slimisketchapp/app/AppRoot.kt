@@ -9,6 +9,8 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
 import com.forsomeonespecial.slimisketchapp.core.ui.theme.SlimiSketchAppTheme
+import com.forsomeonespecial.slimisketchapp.feature.main.presentation.navigation.MainGraph
+import com.forsomeonespecial.slimisketchapp.feature.main.presentation.navigation.mainNavGraph
 import com.forsomeonespecial.slimisketchapp.feature.onboard.presentation.navigation.OnboardGraph
 import com.forsomeonespecial.slimisketchapp.feature.onboard.presentation.navigation.onboardNavGraph
 
@@ -23,9 +25,12 @@ fun AppRoot(
         Scaffold { _ ->
             NavHost(
                 navController = rootNavController,
-                startDestination = OnboardGraph
+                startDestination = MainGraph
             ){
                 onboardNavGraph(rootNavController)
+
+                mainNavGraph(rootNavController)
+
 
             }
 

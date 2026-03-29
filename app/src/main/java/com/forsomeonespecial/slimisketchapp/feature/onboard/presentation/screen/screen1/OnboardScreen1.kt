@@ -1,4 +1,4 @@
-package com.forsomeonespecial.slimisketchapp.feature.onboard.presentation.screens.screen1
+package com.forsomeonespecial.slimisketchapp.feature.onboard.presentation.screen.screen1
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
